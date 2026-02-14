@@ -8201,10 +8201,10 @@ mm10.fa		Pelodiscus_sinensis.PelSin_1.0.dna_sm.toplevel.fa.fai
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>total 1.9M
--rw-r----- 1 gallegosda gallegosda 301K Feb 14 12:28 canFam3_KZFPcluster_chr16_pm10000bp.fa
+-rw-r----- 1 gallegosda gallegosda 301K Feb 14 13:36 canFam3_KZFPcluster_chr16_pm10000bp.fa
 -rw-r----- 1 gallegosda gallegosda  87K Feb 14  2026 galGal4_KZFPcluster_chr3_pm10000bp.fa
--rw-r----- 1 gallegosda gallegosda 447K Feb 14 12:28 hg38_KZFPcluster_chr7_pm10000bp.fa
--rw-r----- 1 gallegosda gallegosda 287K Feb 14 12:28 mm10_KZFPcluster_chr6_pm10000bp.fa
+-rw-r----- 1 gallegosda gallegosda 447K Feb 14 13:36 hg38_KZFPcluster_chr7_pm10000bp.fa
+-rw-r----- 1 gallegosda gallegosda 287K Feb 14 13:36 mm10_KZFPcluster_chr6_pm10000bp.fa
 -rw-r----- 1 gallegosda gallegosda 503K Feb 14  2026 monDom5_KZFPcluster_chr8_pm10000bp.fa
 -rw-r----- 1 gallegosda gallegosda  64K Feb 14  2026 ornAna1_KZFPcluster_Contig1664_pm5000bp.fa
 -rw-r----- 1 gallegosda gallegosda 176K Feb 14  2026 PelSin_1_KZFPcluster_JH212076.1_pm10000bp.fa
@@ -8218,12 +8218,12 @@ mm10.fa		Pelodiscus_sinensis.PelSin_1.0.dna_sm.toplevel.fa.fai
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span><span class="c1">##### qDog tHuman</span>
 cat<span class="w"> </span>&gt;<span class="w"> </span>qDog_tHuman_lastz.sh<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
-<span class="s">lastz ./fasta_regions/canFam3_KZFPcluster_chr16_pm10000bp.fa ./fasta_regions/hg38_KZFPcluster_chr7_pm10000bp.fa --format=PAF &gt; ./paf/QUERY_Dog_canFam3_chr16_TARGET_Human_hg38_chr7_ancientKZFPcluster_lastz_trimmed.paf</span>
+<span class="s">lastz ./fasta_regions/hg38_KZFPcluster_chr7_pm10000bp.fa ./fasta_regions/canFam3_KZFPcluster_chr16_pm10000bp.fa --format=PAF &gt; ./paf/QUERY_Dog_canFam3_chr16_TARGET_Human_hg38_chr7_ancientKZFPcluster_lastz_trimmed.paf</span>
 <span class="s">EOF</span>
 </pre></div>
 </div>
@@ -8235,7 +8235,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qDog_tHuman_lastz.sh<span
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span>swarm<span class="w"> </span>-t<span class="w"> </span><span class="m">8</span><span class="w"> </span>-f<span class="w"> </span>qDog_tHuman_lastz.sh<span class="w"> </span>--module<span class="w"> </span>lastz<span class="w"> </span>--time<span class="o">=</span><span class="m">2</span>:00:00<span class="w"> </span>-g<span class="w"> </span><span class="m">16</span><span class="w"> </span>--logdir<span class="o">=</span>./logs<span class="w"> </span>--sbatch<span class="w"> </span><span class="s2">"--mail-type=BEGIN,END"</span>
@@ -8251,7 +8251,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qDog_tHuman_lastz.sh<span
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>11742635
+<pre>11743741
 </pre>
 </div>
 </div>
@@ -8262,12 +8262,12 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qDog_tHuman_lastz.sh<span
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span><span class="c1">##### qMouse tDog</span>
 cat<span class="w"> </span>&gt;<span class="w"> </span>qMouse_tDog_lastz.sh<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
-<span class="s">lastz ./fasta_regions/mm10_KZFPcluster_chr6_pm10000bp.fa ./fasta_regions/canFam3_KZFPcluster_chr16_pm10000bp.fa --format=PAF &gt; ./paf/QUERY_Mouse_mm10_chr6_TARGET_Dog_canFam3_chr16_ancientKZFPcluster_lastz_trimmed.paf</span>
+<span class="s">lastz ./fasta_regions/canFam3_KZFPcluster_chr16_pm10000bp.fa ./fasta_regions/mm10_KZFPcluster_chr6_pm10000bp.fa --format=PAF &gt; ./paf/QUERY_Mouse_mm10_chr6_TARGET_Dog_canFam3_chr16_ancientKZFPcluster_lastz_trimmed.paf</span>
 <span class="s">EOF</span>
 </pre></div>
 </div>
@@ -8279,7 +8279,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qMouse_tDog_lastz.sh<span
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span>swarm<span class="w"> </span>-t<span class="w"> </span><span class="m">8</span><span class="w"> </span>-f<span class="w"> </span>qMouse_tDog_lastz.sh<span class="w"> </span>--module<span class="w"> </span>lastz<span class="w"> </span>--time<span class="o">=</span><span class="m">2</span>:00:00<span class="w"> </span>-g<span class="w"> </span><span class="m">16</span><span class="w"> </span>--logdir<span class="o">=</span>./logs<span class="w"> </span>--sbatch<span class="w"> </span><span class="s2">"--mail-type=BEGIN,END"</span>
@@ -8295,7 +8295,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qMouse_tDog_lastz.sh<span
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>11743121
+<pre>11743742
 </pre>
 </div>
 </div>
@@ -8306,12 +8306,12 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qMouse_tDog_lastz.sh<span
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span><span class="c1">##### qOpossum tMouse</span>
 cat<span class="w"> </span>&gt;<span class="w"> </span>qOpossum_tMouse.sh<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
-<span class="s">lastz ./fasta_regions/monDom5_KZFPcluster_chr8_pm10000bp.fa ./fasta_regions/mm10_KZFPcluster_chr6_pm10000bp.fa --format=PAF &gt; ./paf/QUERY_Opossum_monDom5_chr8_TARGET_Mouse_mm10_chr6_ancientKZFPcluster_lastz_trimmed.paf</span>
+<span class="s">lastz ./fasta_regions/mm10_KZFPcluster_chr6_pm10000bp.fa ./fasta_regions/monDom5_KZFPcluster_chr8_pm10000bp.fa --format=PAF &gt; ./paf/QUERY_Opossum_monDom5_chr8_TARGET_Mouse_mm10_chr6_ancientKZFPcluster_lastz_trimmed.paf</span>
 <span class="s">EOF</span>
 </pre></div>
 </div>
@@ -8323,7 +8323,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qOpossum_tMouse.sh<span c
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span>swarm<span class="w"> </span>-t<span class="w"> </span><span class="m">8</span><span class="w"> </span>-f<span class="w"> </span>qOpossum_tMouse.sh<span class="w"> </span>--module<span class="w"> </span>lastz<span class="w"> </span>--time<span class="o">=</span><span class="m">2</span>:00:00<span class="w"> </span>-g<span class="w"> </span><span class="m">16</span><span class="w"> </span>--logdir<span class="o">=</span>./logs<span class="w"> </span>--sbatch<span class="w"> </span><span class="s2">"--mail-type=BEGIN,END"</span>
@@ -8339,7 +8339,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qOpossum_tMouse.sh<span c
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>11743126
+<pre>11743744
 </pre>
 </div>
 </div>
@@ -8350,12 +8350,12 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qOpossum_tMouse.sh<span c
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span><span class="c1">##### qPlatypus tOpossum</span>
 cat<span class="w"> </span>&gt;<span class="w"> </span>qPlatypus_tOpossum.sh<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
-<span class="s">lastz ./fasta_regions/ornAna1_KZFPcluster_Contig1664_pm5000bp.fa ./fasta_regions/monDom5_KZFPcluster_chr8_pm10000bp.fa --format=PAF &gt; ./paf/QUERY_Platypus_ornAna1_Contig1664_TARGET_Opossum_monDom5_chr8_ancientKZFPcluster_lastz_trimmed.paf</span>
+<span class="s">lastz ./fasta_regions/monDom5_KZFPcluster_chr8_pm10000bp.fa ./fasta_regions/ornAna1_KZFPcluster_Contig1664_pm5000bp.fa --format=PAF &gt; ./paf/QUERY_Platypus_ornAna1_Contig1664_TARGET_Opossum_monDom5_chr8_ancientKZFPcluster_lastz_trimmed.paf</span>
 <span class="s">EOF</span>
 </pre></div>
 </div>
@@ -8367,7 +8367,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qPlatypus_tOpossum.sh<spa
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span>swarm<span class="w"> </span>-t<span class="w"> </span><span class="m">8</span><span class="w"> </span>-f<span class="w"> </span>qPlatypus_tOpossum.sh<span class="w"> </span>--module<span class="w"> </span>lastz<span class="w"> </span>--time<span class="o">=</span><span class="m">2</span>:00:00<span class="w"> </span>-g<span class="w"> </span><span class="m">16</span><span class="w"> </span>--logdir<span class="o">=</span>./logs<span class="w"> </span>--sbatch<span class="w"> </span><span class="s2">"--mail-type=BEGIN,END"</span>
@@ -8383,7 +8383,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qPlatypus_tOpossum.sh<spa
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>11743165
+<pre>11743759
 </pre>
 </div>
 </div>
@@ -8394,12 +8394,12 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qPlatypus_tOpossum.sh<spa
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span><span class="c1">##### qChicken tPlatypus</span>
 cat<span class="w"> </span>&gt;<span class="w"> </span>qChicken_tPlatypus.sh<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
-<span class="s">lastz ./fasta_regions/galGal4_KZFPcluster_chr3_pm10000bp.fa ./fasta_regions/ornAna1_KZFPcluster_Contig1664_pm5000bp.fa --format=PAF &gt; ./paf/QUERY_Chicken_galGal4_chr2_TARGET_Platypus_ornAna1_Contig1664_ancientKZFPcluster_lastz_trimmed.paf</span>
+<span class="s">lastz ./fasta_regions/ornAna1_KZFPcluster_Contig1664_pm5000bp.fa ./fasta_regions/galGal4_KZFPcluster_chr3_pm10000bp.fa --format=PAF &gt; ./paf/QUERY_Chicken_galGal4_chr2_TARGET_Platypus_ornAna1_Contig1664_ancientKZFPcluster_lastz_trimmed.paf</span>
 <span class="s">EOF</span>
 </pre></div>
 </div>
@@ -8411,7 +8411,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qChicken_tPlatypus.sh<spa
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span>swarm<span class="w"> </span>-t<span class="w"> </span><span class="m">8</span><span class="w"> </span>-f<span class="w"> </span>qChicken_tPlatypus.sh<span class="w"> </span>--module<span class="w"> </span>lastz<span class="w"> </span>--time<span class="o">=</span><span class="m">2</span>:00:00<span class="w"> </span>-g<span class="w"> </span><span class="m">16</span><span class="w"> </span>--logdir<span class="o">=</span>./logs<span class="w"> </span>--sbatch<span class="w"> </span><span class="s2">"--mail-type=BEGIN,END"</span>
@@ -8427,7 +8427,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qChicken_tPlatypus.sh<spa
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>11743207
+<pre>11743769
 </pre>
 </div>
 </div>
@@ -8438,12 +8438,12 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qChicken_tPlatypus.sh<spa
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span><span class="c1">##### qTurtle tChicken</span>
 cat<span class="w"> </span>&gt;<span class="w"> </span>qTurtle_tChicken.sh<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
-<span class="s">lastz ./fasta_regions/PelSin_1_KZFPcluster_JH212076.1_pm10000bp.fa ./fasta_regions/galGal4_KZFPcluster_chr3_pm10000bp.fa --format=PAF &gt; ./paf/QUERY_Turtle_PelSin1_JH212076.1_TARGET_Chicken_galGal4_chr2_ancientKZFPcluster_lastz_trimmed.paf</span>
+<span class="s">lastz ./fasta_regions/galGal4_KZFPcluster_chr3_pm10000bp.fa ./fasta_regions/PelSin_1_KZFPcluster_JH212076.1_pm10000bp.fa --format=PAF &gt; ./paf/QUERY_Turtle_PelSin1_JH212076.1_TARGET_Chicken_galGal4_chr2_ancientKZFPcluster_lastz_trimmed.paf</span>
 <span class="s">EOF</span>
 </pre></div>
 </div>
@@ -8455,7 +8455,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qTurtle_tChicken.sh<span 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-bash"><pre><span></span>swarm<span class="w"> </span>-t<span class="w"> </span><span class="m">8</span><span class="w"> </span>-f<span class="w"> </span>qTurtle_tChicken.sh<span class="w"> </span>--module<span class="w"> </span>lastz<span class="w"> </span>--time<span class="o">=</span><span class="m">2</span>:00:00<span class="w"> </span>-g<span class="w"> </span><span class="m">16</span><span class="w"> </span>--logdir<span class="o">=</span>./logs<span class="w"> </span>--sbatch<span class="w"> </span><span class="s2">"--mail-type=BEGIN,END"</span>
@@ -8471,7 +8471,7 @@ cat<span class="w"> </span>&gt;<span class="w"> </span>qTurtle_tChicken.sh<span 
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>11743235
+<pre>11743775
 </pre>
 </div>
 </div>
